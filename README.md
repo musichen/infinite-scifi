@@ -31,6 +31,7 @@ For a companion fantasy catalog, see [awesome-fantasy](https://github.com/Richar
   - [Comedy](#comedy)
   - [Horror](#horror)
   - [Soviet and Russian Science Fiction](#soviet-and-russian-science-fiction)
+  - [Chinese Science Fiction](#chinese-science-fiction)
 - [Short Story Collections](#short-story-collections)
 - [Movies](#movies)
 - [Movie Series](#movie-series)
@@ -340,7 +341,7 @@ Actually four books by two authors. Based on the TV series of the same name, but
 
 #### [Remembrance of Earth's Past Trilogy](https://www.goodreads.com/series/189931-remembrance-of-earth-s-past) (2014-2016) _by [Liu Cixin](https://en.wikipedia.org/wiki/Liu_Cixin)_
 
-Although each part can be read independently, the whole trilogy has a consistent story line which happens in a very huge time-space context and the first just a beginning. The later two are especially much more hardcore and dramatical, however, gloomy as well.
+A first-contact trilogy whose scale expands from the Cultural Revolution to cosmological time. The first volume can be read on its own; the later two are harder-physics and darker. See also [Chinese Science Fiction](#chinese-science-fiction).
 
 Books:
 - [The Three-Body Problem](https://www.goodreads.com/book/show/20518872-the-three-body-problem) [4.0] 🔥
@@ -2033,6 +2034,79 @@ Satirist, often with his co-author Lyubov Lukina in earlier work. Language play,
 
 - [We Rolled Your Sun](https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%B8_%D0%BC%D1%8B_%D0%B2%D0%B0%D1%88%D0%B5_%D1%81%D0%BE%D0%BB%D0%BD%D1%86%D0%B5) (1998; _Katali my vashe solntse_) - a satirical novel in which a local cosmos is treated as something that can be rolled away. [Fantlab](https://fantlab.ru/work5916)
 - [Portraits Against a Desert Background](https://www.goodreads.com/author/show/412137.Evgeny_Lukin) (_Portrety na fone pustyni_) - linked portraits set on the edge of a literal and social desert. [Author bibliography](https://www.goodreads.com/author/list/412137.Evgeny_Lukin)
+
+### Chinese Science Fiction
+
+A tradition that reaches English mainly after 2014, when Ken Liu's translation of Liu Cixin's _The Three-Body Problem_ won the Hugo Award for Best Novel. Earlier Chinese science fiction (late Qing, Republican satire, 1950s-80s popular science) is thinner in translation. Titles below are the English editions; the original Chinese follows in parentheses.
+
+#### [Lao She](https://en.wikipedia.org/wiki/Lao_She) (1899-1966)
+
+Beijing novelist, better known for social realism. One science-fiction book survives as the main pre-1949 Chinese example of the form.
+
+- [Cat Country](https://en.wikipedia.org/wiki/Cat_Country) (1933; _Maochengji_) - also _City of Cats_. A crashed Earthman finds a Martian nation of cat-people. Satire of 1930s China, closer to Wells than to later hard SF. [Goodreads](https://www.goodreads.com/book/show/2419417.Cat_Country)
+
+#### [Liu Cixin](https://en.wikipedia.org/wiki/Liu_Cixin) (b. 1963)
+
+Power-plant engineer. The writer who made contemporary Chinese science fiction an international field. English volumes of the trilogy appeared 2014-2016; a Netflix series, _3 Body Problem_, followed in 2024. See also the entry under [Science Fiction](#science-fiction).
+
+- [The Three-Body Problem](https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)) (2008 Chinese, 2014 English; _Santi_) - first contact during and after the Cultural Revolution. Hugo Award for Best Novel, 2015. Translated by Ken Liu. [Goodreads](https://www.goodreads.com/book/show/20518872-the-three-body-problem)
+- [The Dark Forest](https://en.wikipedia.org/wiki/The_Dark_Forest) (2008 Chinese, 2015 English; _Hei'an senlin_) - the second volume: cosmic sociology, the "dark forest" deterrence thesis, and a mind that sophons cannot read. Translated by Joel Martinsen. [Goodreads](https://www.goodreads.com/book/show/23168817-the-dark-forest)
+- [Death's End](https://en.wikipedia.org/wiki/Death%27s_End) (2010 Chinese, 2016 English; _Sishen yongsheng_) - the third volume: the deterrence balance breaks, and the story leaves the solar system. Translated by Ken Liu. [Goodreads](https://www.goodreads.com/book/show/25451264-death-s-end)
+- [The Wandering Earth](https://en.wikipedia.org/wiki/The_Wandering_Earth_(novella)) (2000; _Liulang diqiu_) - a novella in which Earth is driven out of orbit to escape a dying Sun. Source of the 2019 film of the same name. English collection: [The Wandering Earth](https://www.goodreads.com/book/show/56525263-the-wandering-earth).
+- [Ball Lightning](https://en.wikipedia.org/wiki/Ball_Lightning_(novel)) (2004; _Qiuzhuang shandian_) - a hard-SF novel of weapons research and a childhood death by ball lightning. English 2018, translated by Joel Martinsen. [Goodreads](https://www.goodreads.com/book/show/32076670-ball-lightning)
+- [Supernova Era](https://en.wikipedia.org/wiki/Supernova_Era) (2003; _Chaoxinxing jiyuan_) - a nearby supernova kills everyone over the age of thirteen; children inherit the state. English 2019.
+- [To Hold Up the Sky](https://www.goodreads.com/book/show/49247266-to-hold-up-the-sky) (2020 English) - a later English collection of shorter work.
+
+#### [Hao Jingfang](https://en.wikipedia.org/wiki/Hao_Jingfang) (b. 1984)
+
+Economist and novelist. First Chinese woman to win a Hugo Award.
+
+- [Folding Beijing](https://en.wikipedia.org/wiki/Folding_Beijing) (2014; _Beijing zhedie_) - a novelette: the city physically folds into three class-timed spaces. Hugo Award for Best Novelette, 2016. Translated by Ken Liu. Read in [Uncanny Magazine](https://uncannymagazine.com/article/folding-beijing-hao-jingfang/) and in [Invisible Planets](https://www.goodreads.com/book/show/28220730-invisible-planets).
+- [Vagabonds](https://www.goodreads.com/book/show/48690044-vagabonds) (2011-2012 Chinese, 2020 English; _Liulang cangqiong_) - Mars-born students return from Earth; two polities, two ideas of freedom. Translated by Ken Liu.
+- [Jumpnauts](https://en.wikipedia.org/wiki/Hao_Jingfang) (2024 English) - a later space-contact novel, translated by Ken Liu. See the author's [Wikipedia page](https://en.wikipedia.org/wiki/Hao_Jingfang).
+
+#### [Chen Qiufan](https://en.wikipedia.org/wiki/Chen_Qiufan) (b. 1981)
+
+Also published as Stanley Chan. Near-future work on e-waste, labor, and machine-human hybridity.
+
+- [Waste Tide](https://en.wikipedia.org/wiki/Waste_Tide) (2013; _Huangchao_) - Silicon Isle, a Chinese e-waste processing zone modeled on Guiyu; a migrant "waste girl" and a virus that networks a body. English 2019, translated by Ken Liu. [Goodreads](https://www.goodreads.com/book/show/39863294-waste-tide)
+- [AI 2041](https://en.wikipedia.org/wiki/Kai-Fu_Lee) (2021) _with [Kai-Fu Lee](https://en.wikipedia.org/wiki/Kai-Fu_Lee)_ - ten near-future stories paired with essays on artificial intelligence.
+
+#### [Xia Jia](https://en.wikipedia.org/wiki/Xia_Jia) (b. 1984)
+
+Pen name of Wang Yao. Academic and short-story writer; English presence is almost entirely at story length.
+
+- [A Summer Beyond Your Reach](https://en.wikipedia.org/wiki/Xia_Jia) (2020 English) - collected stories, several first published in _Clarkesworld_ and in Ken Liu's anthologies. Includes "A Hundred Ghosts Parade Tonight."
+- Stories also in [Invisible Planets](https://www.goodreads.com/book/show/28220730-invisible-planets) and [Broken Stars](https://www.goodreads.com/book/show/45046557-broken-stars).
+
+#### [Han Song](https://en.wikipedia.org/wiki/Han_Song_(writer)) (b. 1965)
+
+Xinhua journalist. Darker, more Kafkaesque line of Chinese SF than Liu Cixin's cosmic engineering.
+
+- [Hospital](https://en.wikipedia.org/wiki/Hospital_(Han_novel)) (2016; _Yiyuan_) - first volume of a trilogy. A man enters a hospital in a remote city and does not leave a medical system. English 2023, translated by Michael Berry. [Goodreads](https://www.goodreads.com/book/show/74755144-hospital)
+- The trilogy continues as _Exorcism_ (_Qumo_, 2017) and _Dead Souls_ (_Wangling_, 2018).
+
+#### [Baoshu](https://en.wikipedia.org/wiki/The_Redemption_of_Time) (b. 1980)
+
+Pen name of Li Jun. Career launched by an authorized continuation of Liu Cixin's trilogy.
+
+- [The Redemption of Time](https://en.wikipedia.org/wiki/The_Redemption_of_Time) (2011; _Santi X: Guanxiang zhi zhou_) - written as fan fiction after _Death's End_, then published with Liu Cixin's permission. Follows Yun Tianming after the trilogy. English 2019, translated by Ken Liu. [Goodreads](https://www.goodreads.com/book/show/36262251-the-redemption-of-time)
+
+#### [Ken Liu](https://en.wikipedia.org/wiki/Ken_Liu) (b. 1976)
+
+Chinese-American writer and the main English translator of the current Chinese wave. Included here for that bridge function, not as a mainland Chinese novelist.
+
+- [Invisible Planets](https://www.goodreads.com/book/show/28220730-invisible-planets) (2016) - thirteen stories by seven Chinese writers, translated and introduced by Liu. The standard English doorway into the field besides the Three-Body books.
+- [Broken Stars](https://www.goodreads.com/book/show/45046557-broken-stars) (2019) - a second anthology: later stories, including work by Baoshu, Zhang Ran, and Regina Kanyu Wang.
+- [The Paper Menagerie](https://en.wikipedia.org/wiki/The_Paper_Menagerie) (2011 story; 2016 collection) - Liu's own short fiction; the title story won Hugo, Nebula, and World Fantasy awards.
+- [The Grace of Kings](https://en.wikipedia.org/wiki/The_Grace_of_Kings) (2015) - first volume of the Dandelion Dynasty, silkpunk epic drawn from the Chu-Han contention.
+
+#### Other names in the English anthologies
+
+- [Ma Boyong](https://en.wikipedia.org/wiki/Ma_Boyong) - "The City of Silence" (in _Invisible Planets_): a networked language-control story.
+- [Cheng Jingbo](https://www.goodreads.com/book/show/28220730-invisible-planets) - "Grave of the Fireflies" (in _Invisible Planets_).
+- [Tang Fei](https://www.goodreads.com/book/show/28220730-invisible-planets) - "Call Girl" (in _Invisible Planets_).
+- [Zhang Ran](https://www.goodreads.com/book/show/45046557-broken-stars) - stories in _Broken Stars_.
 
 ## Short Story Collections
 
