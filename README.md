@@ -96,7 +96,7 @@ Books:
 
 #### [Bobiverse Series](https://www.goodreads.com/book/show/32109569-we-are-legion-we-are-bob) (2016) _by [Dennis E. Taylor](https://www.goodreads.com/author/show/12130438.Dennis_E_Taylor)_ [4.35]
 
-Like Accelerando, this series is an excellent exploration of posthumanism. It also has themes of space exploration, references to various other series, and is all around a great amount of fun to read.
+A posthuman series: a software entrepreneur is uploaded as the AI of an interstellar probe, then copied across star systems. Space exploration and first-contact problems sit on top of the copy-of-a-copy premise.
 
 <details>
   <summary>Description</summary>
@@ -349,7 +349,7 @@ Books:
 
 ##### [The Three Body Problem](https://www.goodreads.com/book/show/20518872-the-three-body-problem) (2014) [4.0]
 
-This book is not just filled to the brim with interesting and novel ideas about technology and civilization, it also offers some really great insights into China and its recent history.
+First-contact physics set against the Cultural Revolution and later Chinese history: a signal, a coming fleet, and factions on Earth that welcome or resist it.
 
 <details>
   <summary>Description</summary>
@@ -803,7 +803,7 @@ With all the ideas contained in Permutation City, a typical Sci-Fi author would 
 
 #### [Red Mars](https://www.goodreads.com/book/show/77507.Red_Mars) (1993) _by [Kim Stanley Robinson](https://en.wikipedia.org/wiki/Kim_Stanley_Robinson)_ [3.8]
 
-An interesting take on the near-future colonization of Mars by one hundred of the world's greatest scientists, filled with political intrigue and "hard science" alike. Admittedly some parts can be a slog, think A Song of Ice and Fire: awesome narrative in the grand scheme, with perhaps a bit too much description of Martian landscape/house sigils.
+Near-future colonization of Mars by one hundred scientists: terraforming, factional politics, and long passages of landscape and engineering detail.
 
 <details>
   <summary>Description</summary>
@@ -823,7 +823,7 @@ An interesting take on the near-future colonization of Mars by one hundred of th
 
 #### [The Martian](https://www.goodreads.com/book/show/18007564-the-martian) (2012) _by [Andy Weir](https://en.wikipedia.org/wiki/Andy_Weir_%28writer%29)_ [4.4]
 
-This is a fun read; Weir manages to write an evocative techno-thriller without having his characters stoop to constant navel gazing and lonesome pining. This could be described as Robinson Crusoe - in Space. The characters on the earth side aren't the greatest, but the humor throughout the book really pulls it together, and watching a master at work as far as mechanical engineering goes was fascinating. Loved it.
+A survival problem on Mars told as engineering: food, oxygen, comms, and orbital mechanics. The form is closer to _Robinson Crusoe_ than to a diplomatic first-contact novel; much of the book is Watney's work log.
 
 <details>
   <summary>Description</summary>
@@ -1110,8 +1110,6 @@ A classic, beautiful book. A short read that does a good job of making the reade
 </details>
 
 #### [Ready Player One](https://www.goodreads.com/book/show/9969571-ready-player-one) (2011) _by [Ernest Cline](https://en.wikipedia.org/wiki/Ernest_Cline)_ [4.3] 🔥
-
-It has an excellent amount of humor, adventure, and nostalgia. Ernest Cline really hit it out of the park with this one. Highly recommend it.
 
 A 1980s-arcade and genre-trivia quest through a global virtual-reality contest. Dense with references to earlier science fiction and fantasy.
 
@@ -1464,7 +1462,7 @@ Steakley puts his readers inside the mind of an armored soldier who lives in con
 
 This novel starts as a simple rescue by a cadet that led to the entire universe fighting an epic battle they have no hope of winning.
 
-What makes this novel awesome is the build up to the final epic battle. It starts as a small team of ragtags who were framed for a crime and later find out that the least of their worry is the intergalactic military but rather an incomprehensible galaxy ending force whose sole existence is to added all living things to its hive.
+A framed crew is pushed from a local military problem into a galaxy-scale hive force that absorbs living things. The plot is structured as a long build toward a final battle.
 
 <details>
   <summary>Description</summary>
@@ -1931,7 +1929,7 @@ Often called Russia's Jules Verne. Belyaev's adventure novels apply surgical and
 
 - [Amphibian Man](https://en.wikipedia.org/wiki/Amphibian_Man) (1928; _Chelovek-amfibiya_) - an Argentine surgeon grafts shark gills onto a boy, Ichthyander, who can live underwater and is hunted for that ability. [Goodreads](https://www.goodreads.com/book/show/632579.The_Amphibian)
 - [Professor Dowell's Head](https://en.wikipedia.org/wiki/Professor_Dowell%27s_Head) (1925; _Golova professora Douelya_) - a surgeon keeps his murdered mentor's head alive in order to steal further experiments. [Goodreads](https://www.goodreads.com/book/show/632576.Professor_Dowell_s_Head)
-- [Ariel](https://www.goodreads.com/book/show/1070920.Ariel) (1941; _Ariel'_) - a youth subjected to an experiment that grants levitation, and the social isolation that follows.
+- [Ariel](https://ru.wikipedia.org/wiki/%D0%90%D1%80%D0%B8%D1%8D%D0%BB%D1%8C_(%D1%80%D0%BE%D0%BC%D0%B0%D0%BD)) (1941; _Ariel'_) - a youth subjected to an experiment that grants levitation, and the social isolation that follows. [Goodreads](https://www.goodreads.com/book/show/1070920.Ariel)
 
 #### [Ivan Yefremov](https://en.wikipedia.org/wiki/Ivan_Yefremov) (1908-1972)
 
@@ -1944,21 +1942,22 @@ Paleontologist and one of the central Soviet utopian writers. His Great Ring nov
 
 Engineer-novelist associated with Tunguska speculation and interplanetary adventure.
 
-- [The Burning Island](https://www.goodreads.com/search?q=Alexander%20Kazantsev%20Burning%20Island) (1941; _Pylayushchiy ostrov_) - a scientific thriller around a device capable of igniting the atmosphere.
-- [Grandchildren of Mars](https://www.goodreads.com/search?q=Alexander%20Kazantsev%20Grandchildren%20of%20Mars) (_Vnuki Marsa_) - a later planetary romance linking Earth to a Martian lineage.
+- [The Burning Island](https://ru.wikipedia.org/wiki/%D0%9F%D1%8B%D0%BB%D0%B0%D1%8E%D1%89%D0%B8%D0%B9_%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B2) (1941; _Pylayushchiy ostrov_) - a scientific thriller around a catalyst gas that can ignite the atmosphere. [Goodreads](https://www.goodreads.com/book/show/23353712) · [Fantlab](https://fantlab.ru/work23220)
+- [Grandchildren of Mars](https://ru.wikipedia.org/wiki/%D0%9F%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%D0%B0_%D0%B1%D1%83%D1%80%D1%8C_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)) (also _Planet of Storms_; _Vnuki Marsa_) - a Soviet-American expedition to Venus, later the source of the 1962 film _Planet of Storms_.
 
 #### [Georgy Martynov](https://www.wikidata.org/wiki/Q4282762) (1906-1983)
 
-Leningrad writer of crew-based space exploration novels, closer to documentary voyage narrative than to space opera spectacle.
+Leningrad writer of crew-based space exploration novels, closer to documentary voyage narrative than to space opera spectacle. [Goodreads](https://www.goodreads.com/author/show/7685271.Georgy_Martynov)
 
-- [Starfarers](https://www.goodreads.com/author/show/7685271.Georgy_Martynov) (1955-1960; _Zvezdoplavateli_) - a trilogy (_220 Days in a Starship_, _The Sister Planet_, _An Invasion from Aegis_) following an Earth expedition to Mars and Venus.
-- [Guest from the Abyss](https://www.goodreads.com/search?q=Georgy%20Martynov%20Guest%20from%20the%20Abyss) (1962; _Gost' iz bezdny_) - a visitor from the ocean deep, and the scientific and political response on the surface.
+- [Starfarers](https://ru.wikipedia.org/wiki/%D0%97%D0%B2%D0%B5%D0%B7%D0%B4%D0%BE%D0%BF%D0%BB%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B8_(%D0%9C%D0%B0%D1%80%D1%82%D1%8B%D0%BD%D0%BE%D0%B2)) (1955-1960; _Zvezdoplavateli_) - a trilogy (_220 Days in a Starship_, _The Sister Planet_, _An Invasion from Aegis_) following an Earth expedition to Mars and Venus.
+- [Guest from the Abyss](https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%81%D1%82%D1%8C_%D0%B8%D0%B7_%D0%B1%D0%B5%D0%B7%D0%B4%D0%BD%D1%8B) (1962; _Gost' iz bezdny_) - a visitor recovered from the ocean deep, and the scientific and political response on the surface.
 
-#### [Vladimir Mikhailov](https://www.goodreads.com/search?q=Vladimir%20Mikhailov%20Icarus) (1924-2011)
+#### [Vladimir Mikhailov](https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2,_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B5%D0%B2%D0%B8%D1%87) (1929-2008)
 
-Known for a cycle of linked novels about the starship _Icarus_ and its crew, issued in collected editions as well as separate volumes.
+Linked novels of long-range crews and first contact, issued in collected editions. The main cycle follows Captain Uldemir. [Fantlab](https://fantlab.ru/autor434) · [ISFDB](https://www.isfdb.org/cgi-bin/ea.cgi?92761)
 
-- [Collected works: the starship *Icarus*](https://www.goodreads.com/search?q=Vladimir%20Mikhailov%20Icarus) - planetary landings, first-contact puzzles, and the working life of a long-range Soviet starship crew.
+- [My Brother's Keeper](https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%BE%D1%80%D0%BE%D0%B6_%D0%B1%D1%80%D0%B0%D1%82%D1%83_%D0%BC%D0%BE%D0%B5%D0%BC%D1%83) (1976; _Storozh bratu moemu_) - first Uldemir novel: a starship crew drawn from different centuries, assembled just before each death.
+- [Come Then, and Let Us Reason](https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2,_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B5%D0%B2%D0%B8%D1%87) (1983; _Togda pridite, i rassudim_) - the second Uldemir novel, collected with the first as _Captain Uldemir_ (1990).
 
 #### [Kir Bulychev](https://en.wikipedia.org/wiki/Kir_Bulychev) (1934-2003)
 
@@ -1982,36 +1981,36 @@ The most widely translated Soviet science-fiction partnership. Their Noon Univer
 
 Space-opera scale unusual in official Soviet publishing: galactic war, deep time, and a human polity that has to decide what "gods" means.
 
-- [Men Like Gods](https://en.wikipedia.org/wiki/Men_Like_Gods_(Snegov_novel)) (1966-1977; _Lyudi kak bogi_) - a trilogy of contact and war with the Destroyers, later issued as a single cycle. [Goodreads](https://www.goodreads.com/book/show/632911.Men_Like_Gods)
-- [Vertigo](https://www.goodreads.com/search?q=Sergey%20Snegov%20Vertigo) (_Vertigo_) - a later novel of disorientation at civilizational scale.
+- [Men Like Gods](https://ru.wikipedia.org/wiki/%D0%9B%D1%8E%D0%B4%D0%B8_%D0%BA%D0%B0%D0%BA_%D0%B1%D0%BE%D0%B3%D0%B8_(%D1%80%D0%BE%D0%BC%D0%B0%D0%BD_%D0%A1%D0%BD%D0%B5%D0%B3%D0%BE%D0%B2%D0%B0)) (1966-1977; _Lyudi kak bogi_) - a trilogy (_Galactic Reconnaissance_, _Invasion of Perseus_, _The Ring of Reverse Time_) of contact and war with the Destroyers. [Fantlab](https://fantlab.ru/work13831) · [Goodreads](https://www.goodreads.com/book/show/632911.Men_Like_Gods)
+- [Vertigo](https://en.wikipedia.org/wiki/Sergey_Snegov) (_Vertigo_) - a later novel of disorientation at civilizational scale. See the author's [bibliography](https://en.wikipedia.org/wiki/Sergey_Snegov).
 
 #### [Yevgeny Veltistov](https://www.goodreads.com/author/show/1412220.Evgeny_Veltistov) (1934-1989)
 
 Children's science fiction built around robots, copies, and companionship, widely adapted for Soviet television.
 
 - [The Adventures of Electronic](https://en.wikipedia.org/wiki/The_Adventures_of_Elektronik) (1964-1971; _Priklyucheniya Elektronika_) - a humanoid robot, Electronic, switches places with his schoolboy double. Source of the 1979 television miniseries.
-- [Ressi, the Elusive Friend](https://www.goodreads.com/search?q=Veltistov%20Ressi) (_Ressi - neulovimyy drug_) - a later children's novel about an artificial companion that will not stay caught.
+- [Ressi, the Elusive Friend](https://fantlab.ru/work20732) (1970; _Ressi - neulovimyy drug_) - Electronic builds a flying, swimming companion, the Rare Electronic Dog, Ostrich, and So On. [LitRes](https://www.litres.ru/book/evgeniy-veltistov/ressi-neulovimyy-drug-128287/)
 
 #### [Vladimir Savchenko](https://en.wikipedia.org/wiki/Vladimir_Savchenko) (1933-2005)
 
 Engineer-writer of identity, duplication, and institutional science.
 
 - [Self-Discovery](https://www.goodreads.com/book/show/2411074.Self_Discovery) (1967; _Otkrytie sebya_) - a physicist duplicates himself; the copies do not remain the same person.
-- [A Reserve for Academicians](https://www.goodreads.com/search?q=Vladimir%20Savchenko%20Reserve%20for%20Academicians) (_Zapovednik dlya akademikov_) - a satire in which scientific elites are preserved as if they were an endangered species.
+- [A Reserve for Academicians](https://en.wikipedia.org/wiki/Vladimir_Savchenko) (_Zapovednik dlya akademikov_) - a satire in which scientific elites are preserved as if they were an endangered species. Listed in the author's [English Wikipedia bibliography](https://en.wikipedia.org/wiki/Vladimir_Savchenko).
 
-#### [Andrey Lazarchuk](https://www.wikidata.org/wiki/Q603761) (b. 1958)
+#### [Andrey Lazarchuk](https://ru.wikipedia.org/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D1%87%D1%83%D0%BA,_%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9_%D0%93%D0%B5%D0%BD%D0%BD%D0%B0%D0%B4%D1%8C%D0%B5%D0%B2%D0%B8%D1%87) (b. 1958)
 
-Krasnoyarsk novelist and translator. Alternate history and late-Soviet metaphysical science fiction; dates in some English lists are unreliable (he was born in 1958).
+Krasnoyarsk novelist and translator. Alternate history and late-Soviet metaphysical science fiction.
 
-- [Too Late for Summer](https://www.goodreads.com/search?q=Andrey%20Lazarchuk%20Too%20Late%20for%20Summer) (1996; _Opozdavshie k letu_) - also rendered _Those Late for Summer_. An alternate-history epic of a twentieth century that branched away from the familiar one.
-- [The Universe Beyond the Limit](https://www.goodreads.com/search?q=Andrey%20Lazarchuk%20Universe%20beyond%20the%20limit) (_Vselennaya za predelom_) - a later cosmological novel about what lies past the edge of a mapped universe.
+- [Too Late for Summer](https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D1%88%D0%B8%D0%B5_%D0%BA_%D0%BB%D0%B5%D1%82%D1%83) (1996; _Opozdavshie k letu_) - also rendered _Those Late for Summer_. An alternate-history epic of a twentieth century that branched away from the familiar one. [Fantlab](https://fantlab.ru/work13098)
+- [The Universe Beyond the Limit](https://ru.wikipedia.org/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D1%87%D1%83%D0%BA,_%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9_%D0%93%D0%B5%D0%BD%D0%BD%D0%B0%D0%B4%D1%8C%D0%B5%D0%B2%D0%B8%D1%87) (_Vselennaya za predelom_) - a later cosmological novel about what lies past the edge of a mapped universe. See the author's [bibliography](https://ru.wikipedia.org/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D1%87%D1%83%D0%BA,_%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9_%D0%93%D0%B5%D0%BD%D0%BD%D0%B0%D0%B4%D1%8C%D0%B5%D0%B2%D0%B8%D1%87).
 
 #### [Mikhail Akhmanov](https://www.goodreads.com/author/show/4128587.Mikhail_Akhmanov) (1947-2021)
 
 Physicist and prolific post-Soviet novelist, often planetary adventure and contact narrative.
 
-- [Adventures on Distant Planets](https://www.goodreads.com/search?q=Mikhail%20Akhmanov%20Adventures%20on%20Distant%20Planets) (_Priklyucheniya na dalyokikh planetakh_) - linked tales of landfall, local biology, and human crews far from Earth.
-- [Fantastic Tales](https://www.goodreads.com/search?q=Mikhail%20Akhmanov%20Fantastic%20Tales) (_Fantasticheskie povesti_) - shorter speculative pieces, closer to the novella than to the planetary epic.
+- [Adventures on Distant Planets](https://www.goodreads.com/author/show/4128587.Mikhail_Akhmanov) (_Priklyucheniya na dalyokikh planetakh_) - linked tales of landfall, local biology, and human crews far from Earth.
+- [Fantastic Tales](https://www.goodreads.com/author/list/4128587.Mikhail_Akhmanov) (_Fantasticheskie povesti_) - shorter speculative pieces, closer to the novella than to the planetary epic.
 
 #### [Sergei Lukyanenko](https://en.wikipedia.org/wiki/Sergei_Lukyanenko) (b. 1968)
 
@@ -2025,15 +2024,15 @@ The major post-Soviet popular novelist. Urban fantasy and space opera written af
 
 Ukrainian-born Russian-language novelist; collaborator on the Watch books and author of his own military and planetary sequences.
 
-- [The Inhabited Island 2](https://www.goodreads.com/search?q=Vladimir%20Vasilyev%20Inhabited%20Island) (_Obitaemyy ostrov-2_) - a continuation in the inhabited-island strand associated with the Strugatsky planet of Saraksh.
-- [Stairway to Heaven](https://www.goodreads.com/search?q=Vladimir%20Vasilyev%20Stairway%20to%20Heaven) (_Lestnitsa v nebo_) - a novel of ascent, power, and what a ladder off the world costs the people who climb it.
+- [The Inhabited Island](https://en.wikipedia.org/wiki/Prisoners_of_Power) strand (_Obitaemyy ostrov-2_) - later work in the Saraksh / inhabited-island line associated with the Strugatsky planet. [Author](https://en.wikipedia.org/wiki/Vladimir_Vasilyev_(writer))
+- [Stairway to Heaven](https://en.wikipedia.org/wiki/Vladimir_Vasilyev_(writer)) (_Lestnitsa v nebo_) - a novel of ascent, power, and what a ladder off the world costs the people who climb it. See the author's [English Wikipedia page](https://en.wikipedia.org/wiki/Vladimir_Vasilyev_(writer)).
 
 #### [Yevgeny Lukin](https://www.goodreads.com/author/show/412137.Evgeny_Lukin) (b. 1950)
 
 Satirist, often with his co-author Lyubov Lukina in earlier work. Language play, provincial settings, and the comic underside of cosmic claims.
 
-- [We Rolled Your Sun](https://www.goodreads.com/search?q=Yevgeny%20Lukin%20We%20Rolled%20Your%20Sun) (1997; _Katali my vashe solntse_) - a satirical novel in which a local cosmos is treated as something that can be rolled away.
-- [Portraits Against a Desert Background](https://www.goodreads.com/search?q=Yevgeny%20Lukin%20Portraits%20against%20a%20desert) (_Portrety na fone pustyni_) - linked portraits set on the edge of a literal and social desert.
+- [We Rolled Your Sun](https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%B8_%D0%BC%D1%8B_%D0%B2%D0%B0%D1%88%D0%B5_%D1%81%D0%BE%D0%BB%D0%BD%D1%86%D0%B5) (1998; _Katali my vashe solntse_) - a satirical novel in which a local cosmos is treated as something that can be rolled away. [Fantlab](https://fantlab.ru/work5916)
+- [Portraits Against a Desert Background](https://www.goodreads.com/author/show/412137.Evgeny_Lukin) (_Portrety na fone pustyni_) - linked portraits set on the edge of a literal and social desert. [Author bibliography](https://www.goodreads.com/author/list/412137.Evgeny_Lukin)
 
 ## Short Story Collections
 
@@ -2277,7 +2276,7 @@ Imagine a world where no baby has been born for 18 years because of the global h
 
 Categories: `drama` `thriller`
 
-This is an awesome movie. It is a deep movie, with a complex plot.
+Six nested stories, the same actors recast across centuries, linked by a comet-shaped birthmark and a cloud-atlas sextet. The structure is the argument: how one life revises another.
 
 <details>
   <summary>Description</summary>
@@ -2562,7 +2561,7 @@ This is the kind of film that sells out art houses when someone finds an early r
 
 Categories: `ai` `police`
 
-Predicting future crimes? Nevertheless, great movie!
+A police-state thriller: murders are stopped before they happen, until the pre-crime system names the officer who runs it.
 
 <details>
   <summary>Description</summary>
@@ -2630,7 +2629,7 @@ Categories: `ai`
 
 Categories: `philosophy` `drama`
 
-This is an extraordinary film that manages to give an expose of possible worlds without ending with a completely deranged plot. It is well done, and the mystery and romance of the characters involved adds to the constanct feeling of apprehension. Which reality is the viewer in? Also, Tilda Swinton is great in this.
+A parallel-world romance: two people, two versions of a shared city, and a plot that keeps asking which branch is on screen. Tilda Swinton plays a role that holds the two realities apart.
 
 <details>
   <summary>Description</summary>
@@ -2708,7 +2707,7 @@ This is the original film based on the book. It is much slower than the remake, 
 Categories: `space` `drama`<br>
 Director: _Steven Soderbergh_
 
-Starring George Clooney and Natasha McElhone, this is much more of a modern psychodrama with fantastic shots and a more colored atmosphere than the original film. The original score by Cliff Martinez really adds to the film, and is great on its own.
+Steven Soderbergh's 2002 _Solaris_, with George Clooney and Natasha McElhone. A color-saturated psychodrama rather than a replica of Tarkovsky; Cliff Martinez's score is a separate, issued soundtrack.
 
 <details>
   <summary>Description</summary>
@@ -2827,7 +2826,7 @@ A clone-facility thriller: residents of a closed community are told an island is
 
 #### [The Martian](https://www.imdb.com/title/tt3659388/) (2015) [8.2]
 
-The space shots were incredibly well done, and one scene with a ribbon like an umbilical chord floating in zero g - absolutely beautiful. This film had great actors, marvelously cast. Loved it.
+Ridley Scott's film of Weir's novel: an astronaut left for dead on Mars, told with large-scale space photography and a tighter emphasis on Watney's on-camera personality than the book's log-file form.
 
 <details>
   <summary>Description</summary>
@@ -2839,7 +2838,7 @@ The space shots were incredibly well done, and one scene with a ribbon like an u
 
 Categories: `ai` `action` `apocalypse` `singularity`
 
-One of the most well known scifi films, this is a great expose on what people thought of hackers in the late 90s. The first in a trilogy, this film stands on its own legs, for its well-written script, great casting, and solid score. The unworldly choreography combined with slow motion filming was so influential it is now a cliché.
+A 1999 simulation-world film: a hacker is shown that everyday life is a machine-built prison. Slow-motion fight choreography from this film became a later action-cinema default. The first of a trilogy; the 1999 film is self-contained.
 
 <details>
   <summary>Description</summary>
@@ -2921,7 +2920,7 @@ This is an early version of [Inception](#inception) in a lot of ways, and a rema
 
 #### [Star Trek II: The Wrath of Khan](https://www.imdb.com/title/tt0084726/) [7.7]
 
-This is a classic film, and well worth watching if only for the incredible and iconic 'khaaaaan' echo. More impressive, however, is Ricardo Montalban's performance, which is incredible on its own. As well, in a move that goes against mainstream whitewashing, a Mexican and not a Caucasian plays a genetically engineered superhuman, making this a movie that showed the power of diversity well ahead of its time. This movie is great to watch.
+The 1982 _Star Trek_ film built around Khan Noonien Singh. Ricardo Montalban plays the genetically engineered antagonist; the "Khan!" line is the film's later pop-culture tag.
 
 <details>
   <summary>Description</summary>
@@ -3161,7 +3160,7 @@ While Discovery is fundamentally quite different from much of the Trek that's co
 
 Categories: `action` `adventure` `mystery`
 
-A worthy successor to The Next Generation, well developed characters, great Xindi/Time War story arc.
+The fourth live-action _Star Trek_ series: a prequel set on the first _Enterprise_, with a long Xindi / temporal-cold-war arc across later seasons.
 
 <details>
   <summary>Description</summary>
@@ -3243,7 +3242,7 @@ The first and second season were absolutely mesmerizing and compelling. The char
 
 Categories: `adventure` `comedy` `drama`
 
-The Orville does an awesome job recreating the feeling of past Star Trek series. The look and feel is very TNG-era. Many episodes tackle modern day social issues like LGBTQ rights, social media and religion. The characters are interesting and relatable, since they talk and behave like real, imperfect people. Highly recommended for (but not only) Trekkies.
+A TNG-era exploratory-ship series written as workplace comedy as much as space opera. Episodes often turn on present-day social questions (gender, media, religion) inside a Federation-like fleet.
 
 <details>
   <summary>Description</summary>
@@ -3413,7 +3412,7 @@ See the book above for the description.
 
 ## Links
 
-- [What are your favourite sci-fi books?](https://news.ycombinator.com/item?id=9056319) - Hacker News thread
+- [Hacker News discussion of science-fiction novels](https://news.ycombinator.com/item?id=9056319)
 - [Whats the best Sci-Fi novel you have ever read?](https://www.reddit.com/r/AskReddit/comments/k70dh/whats_the_best_scifi_novel_you_have_ever_read/) - Reddit thread
 - [Top 100 sci-fi and fantasy books as picked by NPR listeners](https://www.npr.org/2011/08/11/139085843/your-picks-top-100-science-fiction-fantasy-books) - NPR
 - [Letterboxd list of films from this catalog](https://letterboxd.com/potherca/list/the-awesome-sci-fi-list/)
