@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Sci-Fi - Interactive Catalog</title>
+  <meta name="description" content="A searchable, interactive catalog of science fiction novels, films, series, comics, and audiobooks - the web viewer for the Infinite Sci-Fi list.">
+  <meta property="og:title" content="Infinite Sci-Fi - Interactive Catalog">
+  <meta property="og:description" content="Search and browse a working catalog of science fiction novels, films, series, comics, and audiobooks.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- app.js and plugins MUST load before alpinejs: Alpine's CDN starts synchronously
+       on script execution and fires alpine:init immediately, so registrations have
+       to be in place beforehand. -->
+  <script defer src="js/app.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.14.9/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js"></script>
+</head>
+<body x-data="app" x-init="init()" :class="{ 'sidebar-open': sidebarOpen }">
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div id="cosmos"></div>
+  <div id="stars"><canvas aria-hidden="true"></canvas></div>
+
+  <!-- ================= top bar ================= -->
+  <header class="topbar">
+    <button class="icon-btn menu" @click="sidebarOpen = !sidebarOpen" aria-label="Toggle navigation">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+
+    <a class="brand" href="#/" @click.prevent="selectAll()">
+      <span class="logo-wrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9.5" stroke="#22d3ee"/>
+          <circle cx="12" cy="12" r="4.5" stroke="#a78bfa"/>
+          <circle cx="12" cy="12" r="1" fill="#67e8f9" stroke="none"/>
+        </svg>
+      </span>
+      <span>Infinite Sci-Fi<small>interactive catalog</small></span>
+    </a>
+
+    <div class="search-wrap" @click.outside="quickOpen = false">
+      <div class="search-box" :class="{ 'searching': quickOpen }">
+        <span aria-hidden="true" x-html="icons().search"></span>
+        <input id="site-search" type="search" placeholder="Search titles, authors, genres...  (press / )"
+               x-model="query"
+               @input="onSearchInput()"
+               @focus="quickOpen = true"
+               @keydown.down.prevent="quickIndex = Math.min(quickIndex + 1, quickResults().length - 1)"
+               @keydown.up.prevent="quickIndex = Math.max(quickIndex - 1, 0)"
+               @keydown.enter.prevent="quickResults()[quickIndex] && jump(quickResults()[quickIndex])"
+               @keydown.escape="query = ''; quickOpen = false"
+               aria-label="Search the catalog"
+               autocomplete="off" spellcheck="false">
+        <span class="kbd-hint" aria-hidden="true">/</span>
+      </div>
+
+      <!-- quick jump dropdown -->
+      <div class="quick-jump" x-show="quickOpen && query.trim() && quickResults().length"
+           x-transition:enter="ease-out duration-100" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100"
+           x-cloak role="listbox" aria-label="Search results">
+        <template x-for="(r, i) in quickResults()" :key="r.entry.id + (r.sub ? '::' + r.sub.title : '')">
+          <div class="qj-item" :class="{ 'active': i === quickIndex }"
+               @mouseenter="quickIndex = i" @mousedown.prevent="jump(r)" role="option">
+            <span class="qj-icon" x-html="kindIcon(r.kind)"></span>
+            <span class="qj-body">
+              <span class="qj-title" x-text="r.title"></span>
+              <span class="qj-meta">
+                <span x-text="r.entry.category"></span>
+                <template x-if="r.sub"><span> · in <span x-text="r.entry.title"></span></span></template>
+                <template x-if="r.entry.year || r.sub?.year"><span> · <span x-text="r.sub ? r.sub.year : r.entry.year"></span></span></template>
+              </span>
+            </span>
+            <span class="rating" :style="'color:' + ratingColor(r.entry.rating, r.kind) + '; border-color: ' + ratingColor(r.entry.rating, r.kind)" x-show="r.entry.rating" x-text="r.entry.rating"></span>
+          </div>
+        </template>
+      </div>
+      <div class="quick-jump" x-show="quickOpen && query.trim() && !quickResults().length" x-cloak>
+        <div class="qj-empty">
+          <span class="big">🛸</span>
+          No matches for <strong x-text="query"></strong>.<br>
+          Try a title, author, or genre like "cyberpunk".
+        </div>
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <a class="icon-btn" href="https://github.com/musichen/infinite-scifi" target="_blank" rel="noopener" aria-label="View source on GitHub">
+        <span aria-hidden="true" x-html="icons().github"></span><span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= layout ================= -->
+  <div class="layout">
+
+    <!-- sidebar -->
+    <nav class="sidebar" :class="{ 'open': sidebarOpen }" aria-label="Catalog navigation">
+      <template x-if="data">
+        <div>
+          <div class="nav-group-label">Browse</div>
+          <button class="nav-item" :class="{ 'active': !activeCategory && !isSearching() }" @click="selectAll()">
+            <span class="nav-kind-icon" x-html="icons().stack"></span>
+            All entries
+            <span class="nav-count" x-text="data.stats.total"></span>
+          </button>
+
+          <template x-for="sec in topSections()" :key="sec.id">
+            <div>
+              <button class="nav-item" @click="toggleGroup(sec.id)" :aria-expanded="!!openGroups[sec.id]">
+                <span class="nav-caret" :class="{ 'open': openGroups[sec.id] }" aria-hidden="true" x-html="icons().chevronRight"></span>
+                <span x-text="sec.name"></span>
+                <span class="nav-count" x-text="sec.entryCount"></span>
+              </button>
+              <div class="nav-sub" x-show="openGroups[sec.id]" x-collapse>
+                <template x-for="cat in sec.subsections" :key="cat.id">
+                  <button class="nav-item" :class="{ 'active': activeCategory === cat.id }"
+                          @click="selectCategory(cat.id, cat.name)">
+                    <span class="nav-kind-icon" x-html="kindIcon(cat.entries.length ? cat.entries[0].kind : 'novel')"></span>
+                    <span x-text="cat.name"></span>
+                    <span class="nav-count" x-text="cat.entries.length"></span>
+                  </button>
+                </template>
+              </div>
+            </div>
+          </template>
+        </div>
+      </template>
+      <div x-show="loading">
+        <div class="nav-group-label">Loading catalog...</div>
+      </div>
+    </nav>
+
+    <div class="scrim" x-show="sidebarOpen" @click="sidebarOpen = false" @keydown.escape="sidebarOpen = false" x-cloak></div>
+
+    <!-- ================= main ================= -->
+    <main class="main" id="main-content">
+
+      <div class="loading-screen" x-show="loading">
+        <div class="spinner" aria-hidden="true"></div>
+        <div>Loading the catalog...</div>
+      </div>
+
+      <div class="error-screen" x-show="error" x-cloak>
+        <div class="big">⚠️</div>
+        <h3>Could not load the catalog</h3>
+        <p x-text="error"></p>
+        <p style="font-size:12.5px">If you are opening this file directly from disk, run a local server instead:
+          <code style="color:var(--cyan)">npx serve docs</code></p>
+      </div>
+
+      <template x-if="data && !loading">
+        <div>
+
+          <!-- hero / browse mode -->
+          <div class="hero" x-show="!isSearching()">
+            <h1 x-text="data.title"></h1>
+            <p class="lede">A working catalog of science fiction novels, films, series, comics, and audiobooks.
+              <span x-show="activeCategory">Currently showing <strong x-text="activeCatName()"></strong>.</span>
+              <span x-show="!activeCategory">Press <kbd style="background:rgba(148,163,184,.12);border:1px solid var(--border);border-radius:5px;padding:0 5px;font-family:var(--font-mono);font-size:12px">/</kbd> or <kbd style="background:rgba(148,163,184,.12);border:1px solid var(--border);border-radius:5px;padding:0 5px;font-family:var(--font-mono);font-size:12px">Ctrl+K</kbd> to fuzzy-search the whole catalog.</span></p>
+            <div class="stat-row">
+              <span class="stat"><b x-text="stats ? stats.total : ''"></b> entries</span>
+              <span class="stat"><span x-html="icons().book"></span><b x-text="stats ? stats.novels : ''"></b> novels</span>
+              <span class="stat"><span x-html="icons().film"></span><b x-text="stats ? stats.movies : ''"></b> movies</span>
+              <span class="stat"><span x-html="icons().tv"></span><b x-text="stats ? stats.series : ''"></b> TV series</span>
+              <span class="stat"><span x-html="icons().comic"></span><b x-text="stats ? stats.comics : ''"></b> comics</span>
+              <span class="stat"><span x-html="icons().stack"></span><b x-text="stats ? stats.collections : ''"></b> collections</span>
+            </div>
+          </div>
+
+          <!-- filter bar (browse mode) -->
+          <div class="filter-bar" x-show="!isSearching()">
+            <span class="filter-label">Type</span>
+            <button class="chip" :class="{ 'active': kindFilter === 'all' }" @click="setKind('all')">All <span class="chip-count" x-text="kindCounts().all"></span></button>
+            <button class="chip" :class="{ 'active': kindFilter === 'novel' }" @click="setKind('novel')">Novels <span class="chip-count" x-text="kindCounts().novel"></span></button>
+            <button class="chip" :class="{ 'active': kindFilter === 'collection' }" @click="setKind('collection')">Collections <span class="chip-count" x-text="kindCounts().collection"></span></button>
+            <button class="chip" :class="{ 'active': kindFilter === 'movie' }" @click="setKind('movie')">Movies <span class="chip-count" x-text="kindCounts().movie"></span></button>
+            <button class="chip" :class="{ 'active': kindFilter === 'series' }" @click="setKind('series')">TV <span class="chip-count" x-text="kindCounts().series"></span></button>
+            <button class="chip" :class="{ 'active': kindFilter === 'comic' }" @click="setKind('comic')">Comics <span class="chip-count" x-text="kindCounts().comic"></span></button>
+            <button class="chip" :class="{ 'active': kindFilter === 'audiobook' }" @click="setKind('audiobook')">Audiobooks <span class="chip-count" x-text="kindCounts().audiobook"></span></button>
+            <span class="filter-sep" aria-hidden="true"></span>
+            <span class="filter-label">Marks</span>
+            <button class="chip" :class="{ 'active': classicOnly }" @click="classicOnly = !classicOnly" title="Works marked as classics">🌟 Classic</button>
+            <button class="chip" :class="{ 'active': hotOnly }" @click="hotOnly = !hotOnly" title="Works with more than 100,000 ratings">🔥 Hot</button>
+            <button class="clear-filters" x-show="kindFilter !== 'all' || classicOnly || hotOnly" @click="clearFilters()">Clear filters</button>
+          </div>
+
+          <!-- browse mode: categories -->
+          <div x-show="!isSearching()">
+            <template x-for="cat in browseCategories()" :key="cat.id">
+              <section :id="'cat-' + cat.id" class="cat-header-wrap">
+                <div class="cat-header">
+                  <h2>
+                    <span x-text="cat.name"></span>
+                    <span class="cat-num" x-text="catEntries(cat).length + (catEntries(cat).length === 1 ? ' entry' : ' entries')"></span>
+                  </h2>
+                  <p class="cat-intro" x-show="cat.intro" x-text="cat.intro"></p>
+                  <hr class="cat-line">
+                </div>
+                <div class="cards">
+                  <template x-for="entry in catEntries(cat)" :key="entry.id">
+                    <article class="card" :id="'entry-' + entry.id" x-data="{ e: entry }">
+                      <!-- entry card -->
+                      <template x-if="entry.kind !== 'author'">
+                        <div>
+                          <div class="card-top">
+                            <h3 class="card-title">
+                              <a :href="entry.url" target="_blank" rel="noopener" x-text="entry.title"></a>
+                            </h3>
+                            <span class="marks">
+                              <span class="mark star" x-show="entry.classic" title="Classic" aria-label="Classic">🌟</span>
+                              <span class="mark fire" x-show="entry.hot" title="More than 100,000 ratings" aria-label="Popular">🔥</span>
+                            </span>
+                          </div>
+                          <div class="card-meta">
+                            <span class="meta-item" x-show="entry.year">
+                              <span aria-hidden="true" x-html="icons().calendar"></span><span x-text="entry.year"></span>
+                            </span>
+                            <span class="meta-item" x-show="entryAuthors(entry).length">
+                              <span aria-hidden="true" x-html="icons().user"></span>
+                              <template x-for="(a, ai) in entryAuthors(entry)" :key="ai">
+                                <span>
+                                  <span x-show="ai > 0" class="sep">,</span>
+                                  <a x-show="a.url" :href="a.url" target="_blank" rel="noopener" x-text="a.name"></a>
+                                  <span x-show="!a.url" x-text="a.name"></span>
+                                </span>
+                              </template>
+                              <span class="sep" x-show="entry.narrator" x-text="' · narrated by ' + entry.narrator"></span>
+                            </span>
+                            <span class="meta-item" x-show="entry.directors && entry.directors.length">
+                              <span aria-hidden="true" x-html="icons().film"></span>
+                              <template x-for="(d, di) in entry.directors" :key="di">
+                                <span>
+                                  <span x-show="di > 0" class="sep">,</span>
+                                  <a x-show="d.url" :href="d.url" target="_blank" rel="noopener" x-text="d.name"></a>
+                                  <span x-show="!d.url" x-text="d.name"></span>
+                                </span>
+                              </template>
+                            </span>
+                            <span class="rating" x-show="entry.rating"
+                                  :style="'color:' + ratingColor(entry.rating, entry.kind) + ';border-color:' + ratingColor(entry.rating, entry.kind)"
+                                  :title="(entry.kind === 'movie' || entry.kind === 'series' ? 'IMDb rating' : 'Goodreads rating') + (entry.ratingAvg ? ' (average)' : '')"
+                                  x-text="ratingLabel(entry.rating, entry.ratingAvg)"></span>
+                          </div>
+                          <div class="tags" x-show="entry.categories && entry.categories.length">
+                            <template x-for="(t, ti) in entry.categories" :key="ti">
+                              <span class="tag" x-text="t"></span>
+                            </template>
+                          </div>
+                          <template x-if="entry.notes">
+                            <div>
+                              <p class="card-notes" :class="{ 'clamped': !isNotesOpen(entry) && entry.notes.length > 340 }"
+                                 x-text="entry.notes"></p>
+                              <button class="notes-toggle" x-show="entry.notes.length > 340" @click="toggleNotes(entry.id)"
+                                      x-text="isNotesOpen(entry) ? 'Show less' : 'Read more'"></button>
+                            </div>
+                          </template>
+                          <template x-if="entry.description">
+                            <div>
+                              <button class="desc-toggle" :class="{ 'open': isDescOpen(entry) }" @click="toggleDesc(entry.id)" :aria-expanded="isDescOpen(entry)">
+                                <span x-text="isDescOpen(entry) ? 'Hide description' : 'Show description'"></span>
+                                <span aria-hidden="true" x-html="icons().chevronDown"></span>
+                              </button>
+                              <div class="desc-body" x-show="isDescOpen(entry)" x-collapse>
+                                <template x-for="(p, pi) in entry.description.split('\n')" :key="pi">
+                                  <p x-show="p.trim()" x-text="p.trim()"></p>
+                                </template>
+                              </div>
+                            </div>
+                          </template>
+                          <div class="books" x-show="entry.books && entry.books.length">
+                            <div class="books-label" x-text="(entry.kind === 'novel' || entry.kind === 'collection') ? 'Books in this entry' : 'Works'"></div>
+                            <div class="books-list">
+                              <template x-for="(b, bi) in entry.books" :key="bi">
+                                <div class="book-row">
+                                  <a :href="b.url" target="_blank" rel="noopener" x-text="b.title"></a>
+                                  <span class="book-rating" x-show="b.rating" x-text="'[' + b.rating + ']'"></span>
+                                  <span class="book-marks" x-show="b.classic || b.hot"><span x-show="b.classic">🌟</span><span x-show="b.hot">🔥</span></span>
+                                </div>
+                              </template>
+                            </div>
+                          </div>
+                          <div class="sub-entries" x-show="entry.subEntries && entry.subEntries.length">
+                            <template x-for="(sub, si) in entry.subEntries" :key="si">
+                              <div class="sub-entry">
+                                <div class="sub-head">
+                                  <a :href="sub.url" target="_blank" rel="noopener" x-text="sub.title"></a>
+                                  <span class="sub-meta">
+                                    <span x-show="sub.year" x-text="sub.year"></span>
+                                    <span x-show="sub.rating"> · <span x-text="sub.rating"></span></span>
+                                    <span x-show="sub.authors && sub.authors.length"> · <template x-for="(a, ai) in (sub.authors || [])" :key="ai"><span><span x-show="ai > 0">, </span><span x-text="a.name"></span></span></template></span>
+                                  </span>
+                                </div>
+                                <p class="sub-notes" x-show="sub.notes" x-text="sub.notes"></p>
+                                <div class="sub-desc" x-show="sub.description" x-text="sub.description"></div>
+                              </div>
+                            </template>
+                          </div>
+                        </div>
+                      </template>
+
+                      <!-- author profile card (Soviet / Chinese SF) -->
+                      <template x-if="entry.kind === 'author'">
+                        <div class="author-card">
+                          <div class="card-top">
+                            <h3 class="card-title">
+                              <span x-text="entry.title"></span>
+                            </h3>
+                          </div>
+                          <div class="card-meta">
+                            <span class="meta-item" x-show="entry.lifeYears">
+                              <span aria-hidden="true" x-html="icons().calendar"></span><span x-text="entry.lifeYears"></span>
+                            </span>
+                            <span class="meta-item">
+                              <span aria-hidden="true" x-html="icons().user"></span>
+                              <a :href="entry.url" target="_blank" rel="noopener" x-text="entry.title + ' (Wikipedia)'"></a>
+                            </span>
+                          </div>
+                          <p class="author-bio" x-show="entry.notes" x-text="entry.notes"></p>
+                          <div x-show="entry.books && entry.books.length">
+                            <div class="books-label">Works</div>
+                            <template x-for="(b, bi) in entry.books" :key="bi">
+                              <div class="author-book">
+                                <div class="ab-title">
+                                  <a :href="b.url" target="_blank" rel="noopener" x-text="b.title"></a>
+                                  <span class="ab-orig" x-show="b.original" x-text="'(' + b.original + ')'"></span>
+                                  <span class="sub-meta" x-show="b.year" x-text="b.year"></span>
+                                </div>
+                                <p class="ab-note" x-show="b.note" x-text="b.note"></p>
+                                <div class="ab-refs" x-show="b.refs && b.refs.length">
+                                  <template x-for="(r, ri) in b.refs" :key="ri">
+                                    <a :href="r.url" target="_blank" rel="noopener" x-text="'↗ ' + r.label"></a>
+                                  </template>
+                                </div>
+                              </div>
+                            </template>
+                          </div>
+                          <div class="sub-entries" x-show="entry.subEntries && entry.subEntries.length">
+                            <template x-for="(sub, si) in entry.subEntries" :key="si">
+                              <div class="sub-entry">
+                                <div class="sub-head">
+                                  <a :href="sub.url" target="_blank" rel="noopener" x-text="sub.title"></a>
+                                </div>
+                                <p class="sub-notes" x-show="sub.notes" x-text="sub.notes"></p>
+                              </div>
+                            </template>
+                          </div>
+                        </div>
+                      </template>
+                    </article>
+                  </template>
+                </div>
+              </section>
+            </template>
+
+            <!-- Links section -->
+            <template x-if="data.links && data.links.length && !activeCategory">
+              <section class="cat-header-wrap" style="margin-top: 40px">
+                <div class="cat-header">
+                  <h2>Links <span class="cat-num" x-text="data.links.length + (data.links.length === 1 ? ' link' : ' links')"></span></h2>
+                  <hr class="cat-line">
+                </div>
+                <div class="links-list">
+                  <template x-for="(l, li) in data.links" :key="li">
+                    <a class="link-row" :href="l.url" target="_blank" rel="noopener">
+                      <span class="l-title" x-text="l.title"></span>
+                      <span class="l-note" x-show="l.note" x-text="l.note"></span>
+                    </a>
+                  </template>
+                </div>
+              </section>
+            </template>
+
+            <div class="empty-state" x-show="!browseCategories().length">
+              <span class="big">🛸</span>
+              <h3>Nothing matches these filters</h3>
+              <p>Try widening the type filter or turning off the marks.</p>
+              <button class="chip" @click="clearFilters()">Clear filters</button>
+            </div>
+          </div>
+
+          <!-- search mode -->
+          <div x-show="isSearching()">
+            <div class="results-head">
+              <h2>Results for <span x-html="highlight(query)"></span></h2>
+              <p class="results-sub" x-text="searchResults().length + ' match' + (searchResults().length === 1 ? '' : 'es') + ' across the catalog'"></p>
+            </div>
+            <div class="sort-row" x-show="searchResults().length > 1">
+              <label for="sort-select" style="font-size:12.5px;color:var(--text-muted)">Sort</label>
+              <select id="sort-select" x-model="sortBy">
+                <option value="relevance">Relevance</option>
+                <option value="rating">Rating (high to low)</option>
+                <option value="year">Year (newest first)</option>
+                <option value="title">Title A-Z</option>
+              </select>
+            </div>
+            <div class="cards">
+              <template x-for="(r, ri) in searchResults()" :key="r.sub ? r.entry.id + '::' + r.sub.title : r.entry.id">
+                <article class="card" :id="'entry-' + (r.sub ? r.entry.id + '::' + r.sub.title : r.entry.id)">
+                  <div class="card-top">
+                    <h3 class="card-title">
+                      <a :href="r.sub ? r.sub.url : r.entry.url" target="_blank" rel="noopener" x-html="highlight(r.sub ? r.sub.title : r.entry.title)"></a>
+                    </h3>
+                    <span class="marks">
+                      <span class="mark star" x-show="r.entry.classic" title="Classic">🌟</span>
+                      <span class="mark fire" x-show="r.entry.hot" title="Popular">🔥</span>
+                    </span>
+                  </div>
+                  <div class="card-meta">
+                    <span class="meta-item">
+                      <span class="nav-kind-icon" x-html="kindIcon(r.kind)"></span>
+                      <span x-text="kindLabel(r.kind)"></span>
+                      <span class="sep">·</span>
+                      <span x-text="r.entry.category"></span>
+                      <template x-if="r.sub"><span class="sep">·</span><span x-text="'in ' + r.entry.title"></span></template>
+                    </span>
+                    <span class="meta-item" x-show="r.entry.year || (r.sub && r.sub.year)">
+                      <span aria-hidden="true" x-html="icons().calendar"></span>
+                      <span x-text="r.sub ? r.sub.year : r.entry.year"></span>
+                    </span>
+                    <span class="meta-item" x-show="r.entry.rating">
+                      <span class="rating" :style="'color:' + ratingColor(r.entry.rating, r.kind) + ';border-color:' + ratingColor(r.entry.rating, r.kind)" x-text="r.entry.rating"></span>
+                    </span>
+                  </div>
+                  <template x-if="(r.sub ? r.sub.notes : r.entry.notes)">
+                    <p class="card-notes clamped" x-text="(r.sub ? r.sub.notes : r.entry.notes)"></p>
+                  </template>
+                  <template x-if="(r.sub ? r.sub.description : r.entry.description)">
+                    <p class="card-notes" x-text="(r.sub ? r.sub.description : r.entry.description).slice(0, 240) + '…'"></p>
+                  </template>
+                </article>
+              </template>
+            </div>
+            <div class="empty-state" x-show="!searchResults().length">
+              <span class="big">🛸</span>
+              <h3>No matches for <span x-text="query"></span></h3>
+              <p>Fuzzy search will match partial spellings, e.g. "cyberpunk", "asimov", "Tarkovsky".</p>
+            </div>
+          </div>
+
+          <!-- footer -->
+          <footer class="footer">
+            <span>Catalog maintained by <a href="https://github.com/musichen" target="_blank" rel="noopener">musichen</a></span>
+            <span x-text="'Generated from the Infinite Sci-Fi list (' + data.generatedAt + ')'"></span>
+            <a href="https://github.com/musichen/infinite-scifi" target="_blank" rel="noopener">View the source list on GitHub</a>
+            <a href="https://github.com/RichardLitt/awesome-fantasy" target="_blank" rel="noopener">Companion: awesome-fantasy</a>
+          </footer>
+
+        </div>
+      </template>
+
+    </main>
+  </div>
+
+  <button class="back-top" :class="{ 'show': showTop }" @click="scrollTop()" aria-label="Back to top">
+    <span aria-hidden="true" x-html="icons().arrowUp"></span>
+  </button>
+
+  <style>[x-cloak] { display: none !important; }</style>
+</body>
+</html>

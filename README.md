@@ -10,6 +10,10 @@ _The `[number]` at the end is the rounded Goodreads rating for books, or the IMD
 
 For a companion fantasy catalog, see [awesome-fantasy](https://github.com/RichardLitt/awesome-fantasy).
 
+## Browse it online
+
+This catalog is also available as an interactive website with search: [**Infinite Sci-Fi**](https://musichen.github.io/infinite-scifi/). Browse by category, jump across sections with quick navigation, or fuzzy-search titles, authors, directors, and narrators. The site is generated from this README by [`scripts/build-catalog.js`](scripts/build-catalog.js) into `docs/` and served from GitHub Pages.
+
 ## Contents
 
 - [Novels](#novels)
@@ -493,7 +497,7 @@ Three linked novellas about colonial identity, possible shapeshifters, and unrel
   > In _The Fifth Head of Cerberus_, Wolfe skillfully interweaves three bizarre tales to create a mesmerizing pattern: the harrowing account of the son of a mad genius who discovers his hideous heritage; a young man’s mythic dreamquest for his darker half; the bizarre chronicle of a scientists’ nightmarish imprisonment. Like an intricate, braided knot, the pattern at last unfolds to reveal astonishing truths about this strange and savage alien landscape.
 </details>
 
-#### [The First Fifteen Lives of Harry August](https://www.goodreads.com/book/show/35066358-the-first-fifteen-lives-of-harry-august) (2014) _by [Claire North](https://en.wikipedia.org/wiki/Catherine_Webb) [4.01]
+#### [The First Fifteen Lives of Harry August](https://www.goodreads.com/book/show/35066358-the-first-fifteen-lives-of-harry-august) (2014) _by [Claire North](https://en.wikipedia.org/wiki/Catherine_Webb)_ [4.01]
 
 A novel of forced recurrence: Harry August is reborn into the same life with prior memories intact, and a message from the future arrives at a deathbed.
 
