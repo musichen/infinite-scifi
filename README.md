@@ -3488,6 +3488,14 @@ Some books are also exceptional as audiobooks. Some are not. Here is a space for
 
 See the book above for the description.
 
+## Contributing
+
+Additions are welcome. To add an entry:
+
+1. Find the right section (Novels, Films, Series, Comics, or Audiobooks) and, for novels, the closest category.
+2. Follow the format of the neighbouring entries: `#### [Title](link) (year) _by [Author](link)_ [rating]`, with a short description where the section uses one.
+3. Add one work per pull request and check that the title, year, and author links are correct.
+
 ## Links
 
 - [Hacker News discussion of science-fiction novels](https://news.ycombinator.com/item?id=9056319)
