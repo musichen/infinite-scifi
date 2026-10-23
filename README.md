@@ -3507,3 +3507,7 @@ Additions are welcome. To add an entry:
 ## Credit
 
 Catalog maintained by [musichen](https://github.com/musichen). Bibliographic facts are taken from Goodreads, IMDb, and Wikipedia. An earlier public-domain compilation of English-language science-fiction titles supplied the first skeleton of the list.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
